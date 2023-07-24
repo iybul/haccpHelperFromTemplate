@@ -36,13 +36,16 @@ This template uses the new Next.js App Router. This includes support for enhance
 
 THIS IS THE ORIGINAL METHOD: After creating an account with PlanetScale, you'll need to create a new database and retrieve the `DATABASE_URL`. Optionally, you can use Vercel integration, which will add the `DATABASE_URL` to the environment variables for your project.
 
-THIS IS MY METHOD: After creating an account with Supabase: Create a new organization, get your connectionstring from the Project Settings/Database section
+THIS IS MY METHOD: After creating an account with Supabase: Create a new organization, copy your URL anon and service role keys from the API settings page, get your connectionstring from the Project Settings/Database section, Supabase URL and ANON key get added to your `.env.local` local file
 
-This is the provided `.env.local.example` file, which you'll want to use to create your own `.env.local` file:
 
 ```
 # https://vercel.com/integrations/planetscale
 DATABASE_URL=
+
+# https://supabase.com/
+NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
 
 NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET= # Linux: `openssl rand -hex 32` or go to https://generate-secret.now.sh/32
