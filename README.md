@@ -82,6 +82,17 @@ create policy "Tables are public." on employeeWriter for
    select using (true);
 ```
 
+For handling AUTH we use Supabases auth functionality we use
+
+```
+npm install @supabase/auth-helpers-nextjs @supabase/supabase-js
+
+npm install @supabase/auth-ui-react @supabase/auth-ui-shared
+
+
+```
+
+
 OLD METHOD: Next, inside PlanetScale, create a users table based on the schema defined in this repository.
 
 ```
@@ -93,6 +104,11 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`)
 );
 ```
+
+
+
+
+
 
 Insert a row for testing:
 
